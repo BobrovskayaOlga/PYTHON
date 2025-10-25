@@ -19,4 +19,3 @@ success_message = wait.until(EC.visibility_of_element_located((By.CLASS_NAME,'bg
 
 print(success_message.text)
 
-brauser.quit()

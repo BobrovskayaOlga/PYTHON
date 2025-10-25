@@ -26,4 +26,3 @@ try:
     print(f'Значение атрибута src у третьей картинки: {third_image_src}')
         
 finally:
-    driver.quit()
