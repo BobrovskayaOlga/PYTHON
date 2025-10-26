@@ -26,13 +26,11 @@ class TestSauceDemo:
             checkout_page.fill_checkout_info("John", "Doe", "12345")
             
             total_amount = checkout_page.get_total_amount()
-            total_amount_value = float(total_amount.replace('$', ''))  # Преобразование строки в число
+            total_amount_value = float(total_amount.replace('$', ''))
             expected_total = 58.29
-            tolerance = 0.01
-            assert abs(total_amount_value - expected_total) <= tolerance, \
-                f"Итоговая сумма отличается больше чем на {tolerance}$!"
-                
-            print("Тест пройден!")
+            assert total_amount == "58.29", f"Expected $58.29, but got ${total_amount}"
+            
+            print(f"Тест пройден! Итоговая сумма: ${total_amount}")
             
         except Exception as e:
             print(f"Произошла ошибка: {e}")
