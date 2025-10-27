@@ -26,10 +26,9 @@ class TestSauceDemo:
             checkout_page.fill_checkout_info("John", "Doe", "12345")
             
             total_amount = checkout_page.get_total_amount()
-            
             assert total_amount == "58.29", f"Expected $58.29, but got ${total_amount}"
             
             print(f"Тест пройден! Итоговая сумма: ${total_amount}")
-        
+           
         finally:
             driver.quit()
