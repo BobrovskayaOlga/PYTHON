@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from BasePage import BasePage
 from CheckoutPage import CheckoutPage
+
 class CartPage(BasePage):
     CART_TITLE = (By.CLASS_NAME, "title")
     CHECKOUT_BUTTON = (By.ID, "checkout")

@@ -31,4 +31,4 @@ class LoginPage(BasePage):
     def login_as_standard_user(self):
         return self.enter_username("standard_user")\
                    .enter_password("secret_sauce")\
-                   .click_login()
+
